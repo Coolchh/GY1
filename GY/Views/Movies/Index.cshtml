@@ -1,0 +1,219 @@
+﻿@model GY.Models.MoviesViewMode
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <link href='http://fonts.useso.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="~/css/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/css/style.css" rel="stylesheet" />
+    <script src="~/js-movie/jquery.min.js"></script>
+    <link href="~/css/css/component.css" rel="stylesheet" />
+    <script src="~/js-movie/modernizr.custom.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="top-header">
+            <div class="container">
+                <div class="top-head">
+                    <ul class="header-in">
+                        <li><a href="#">帮助</a></li>
+                        <li><a href="contact.html"> 联系我们</a></li>
+                        <li><a href="#">怎么使用</a></li>
+                    </ul>
+                    <div class="search">
+                        <form>
+                            <input type="text" value="搜索" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '搜索';}">
+                            <input type="submit" value="">
+                        </form>
+                    </div>
+
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+
+        <div class="header-top">
+            <div class="container">
+                <div class="head-top">
+                    <div class="logo">
+
+                        <h1><a href="index.html"><span> G</span>uang <span>Y</span>ing</a></h1>
+
+                    </div>
+                    <div class="top-nav">
+                        <span class="menu"><img src="~/images/images/menu.png" alt=""> </span>
+
+                        <ul>
+                            <li class="active"><a class="color1" href="index.html">主页</a></li>
+                            <li><a class="color2" href="games.html">电影</a></li>
+                            <li><a class="color3" href="reviews.html">社区</a></li>
+                            <li><a class="color4" href="404.html">电影资讯</a></li>
+                            <li><a class="color5" href="blog.html">电影节</a></li>
+                            <li><a class="color6" href="contact.html">登录/注册</a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+
+                        <!--script-->
+                        <script>
+                            $("span.menu").click(function () {
+                                $(".top-nav ul").slideToggle(500, function () {
+                                });
+                            });
+                        </script>
+
+                    </div>
+
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--content-->
+    <div class="container">
+        <div class="games">
+            <h2> Games</h2>
+
+            <div class="wrap">
+                <div class="main">
+                    <ul class="portfolio-filter text-center">
+                        @foreach (var moviestype in Model.GetMoviesTpye)
+                        {
+                            <li style ="display:inline;"><a class="btn btn-default active" href="@moviestype.TypeID" data-filter="*">@moviestype.TypeName</a></li>
+                        }
+                    </ul>
+                    <ul id="og-grid" class="og-grid">
+                     @foreach (var videos in Model.Movies1)
+                     {
+                        <li>
+                            @*<a href="#" data-largesrc="~/images/images/1.jpg" data-title="Subway Surfers" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">*@
+                            <img class="img-responsive" src="~/@videos.Image" alt="img01" />
+                            @*</a>*@
+                        </li>}
+                        @*<li>
+                            <a href="#" data-largesrc="~/images/images/2.jpg" data-title="Angry Birds" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/2.jpg" alt="img02" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/3.jpg" data-title="Bike Games" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/3.jpg" alt="img03" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/4.jpg" data-title="Temple Run" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/4.jpg" alt="img01" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/5.jpg" data-title="Car Games" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/5.jpg" alt="img01" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/6.jpg" data-title="Fite Games" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/6.jpg" alt="img02" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/7.jpg" data-title="Fite Games" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/7.jpg" alt="img03" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/8.jpg" data-title="Panda Game" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/8.jpg" alt="img01" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/4.jpg" data-title="Temple Run" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/4.jpg" alt="img01" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/3.jpg" data-title="Bike Games" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/3.jpg" alt="img03" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/5.jpg" data-title="Car Games" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/5.jpg" alt="img01" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-largesrc="~/images/images/1.jpg" data-title="Subway Surfers" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
+                                <img class="img-responsive" src="~/images/images/thumbs/1.jpg" alt="img01" />
+                            </a>
+                        </li>*@
+                        <div class="clearfix"> </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/grid.js"></script>
+        <script>
+            $(function () {
+                Grid.init();
+            });
+        </script>
+    </div>
+    <!---->
+    <div class="footer">
+        <div class="footer-middle">
+            <div class="container">
+                <div class="footer-middle-in">
+                    <h6>About us</h6>
+                    <p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
+                </div>
+                <div class="footer-middle-in">
+                    <h6>Information</h6>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">配送信息</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">条款和条件</a></li>
+                    </ul>
+                </div>
+                <div class="footer-middle-in">
+                    <h6>Customer Service</h6>
+                    <ul>
+                        <li><a href="contact.html">联系我们</a></li>
+                        <li><a href="#">回报</a></li>
+                        <li><a href="contact.html">网站地图</a></li>
+                    </ul>
+                </div>
+                <div class="footer-middle-in">
+                    <h6>My Account</h6>
+                    <ul>
+                        <li><a href="#">订单历史</a></li>
+                        <li><a href="#">期望清单</a></li>
+                        <li><a href="#">通讯</a></li>
+                    </ul>
+                </div>
+                <div class="footer-middle-in">
+                    <h6>Extras</h6>
+                    <ul>
+                        <li><a href="#">附属学校</a></li>
+                        <li><a href="#">特价</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <p class="footer-class">Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="#" target="_blank" title="江西师范大学">江西师范大学</a> - Collect from <a href="" title="3522工作室" target="_blank">3522工作室</a></p>
+
+    </div>
+
+
+</body>
+</html>
