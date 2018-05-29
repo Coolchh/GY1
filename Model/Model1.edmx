@@ -76,8 +76,8 @@
           <Property Name="MoviesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MoviesName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Image" Type="nvarchar" MaxLength="50" />
-          <Property Name="Brief" Type="nvarchar" MaxLength="50" />
-          <Property Name="Contents" Type="nvarchar(max)" />
+          <Property Name="Brief" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar(max)" />
           <Property Name="TypeID" Type="int" Nullable="false" />
           <Property Name="Time" Type="datetime" />
           <Property Name="Url" Type="nvarchar" MaxLength="50" />
@@ -233,8 +233,8 @@
           <Property Name="MoviesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MoviesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Brief" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Brief" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="TypeID" Type="Int32" Nullable="false" />
           <Property Name="Time" Type="DateTime" Precision="3" />
           <Property Name="Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -398,7 +398,7 @@
                 <ScalarProperty Name="MoviesName" ColumnName="MoviesName" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Brief" ColumnName="Brief" />
-                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
                 <ScalarProperty Name="TypeID" ColumnName="TypeID" />
                 <ScalarProperty Name="Time" ColumnName="Time" />
                 <ScalarProperty Name="Url" ColumnName="Url" />

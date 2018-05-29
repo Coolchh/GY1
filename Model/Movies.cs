@@ -18,7 +18,7 @@ namespace Model
         public string MoviesName { get; set; }
         public string Image { get; set; }
         public string Brief { get; set; }
-        public string Contents { get; set; }
+        public string Author { get; set; }
         public int TypeID { get; set; }
         public Nullable<System.DateTime> Time { get; set; }
         public string Url { get; set; }

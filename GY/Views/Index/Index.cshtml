@@ -1,4 +1,4 @@
-﻿
+﻿@model GY.Models.IndexViewMode
 @{
     Layout = null;
 }
@@ -225,7 +225,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="clearfix"> </div>
         </div>
     </nav>
-    <div class="copyrights">Collect from <a href="">企业网站模板</a></div>
+    <div class="copyrights">Collect from <a href="">.</a></div>
     <div class="col-sm-3 col-md-2 sidebar">
         <div class="top-navigation">
             <div class="t-menu">MENU</div>
@@ -244,6 +244,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li><a href="movies.html">英语</a></li>
                     <li><a href="movies.html">汉语</a></li>
                     <li><a href="movies.html">印度语</a></li>
+                    <li><a href="movies.html">泰语</a></li>
                 </ul>
                 <!-- script-for-menu -->
                 <script>
@@ -256,9 +257,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>电影活动<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
                 <ul class="cl-effect-1">
                     <li><a href="sports.html">足球</a></li>
-                    <li><a href="sports.html">板球t</a></li>
-                    <li><a href="sports.html">网球</a></li>
-                    <li><a href="sports.html">Shattil</a></li>
+                    <li><a href="sports.html">板球</a></li>
+                    <li><a href="sports.html">篮球</a></li>
+                    
                 </ul>
                 <!-- script-for-menu -->
                 <script>
@@ -289,7 +290,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                 </div>
                 <div class="copyright">
-                    <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                    <p>Copyright &copy; 2018.Company name All rights reserved.More Templates <a href="" target="_blank" title="江西师范大学">江西师范大学</a> - Collect from <a href="#" title="3522-1工作室" target="_blank">3522-1工作室</a></p>
                 </div>
             </div>
         </div>
@@ -298,11 +299,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="main-grids">
             <div class="top-grids">
                 <div class="recommended-info">
-                    <h3>Recent Videos</h3>
+                    <h3>最新电影</h3>
                 </div>
+                @foreach(var newvideo in Model.GetNewMovies) {
                 <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
                     <div class="resent-grid-img recommended-grid-img">
-                        <a href="single.html"><img src="~/images/t1.jpg" alt="" /></a>
+                        <a href="single.html"><img src="~/@newvideo.Image" alt="" /></a>
+     
                         <div class="time">
                             <p>3:04</p>
                         </div>
@@ -311,55 +314,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                     <div class="resent-grid-info recommended-grid-info">
-                        <h3><a href="single.html" class="title title-info">Pellentesque vitae pulvinar tortor nullam interdum metus a imperdiet</a></h3>
-                        <ul>
-                            <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
+                        <h3><a href="single.html" class="title title-info">@newvideo.Brief</a></h3>
+                        <ul> 
+                            <li><p class="author author-info"><a href="#" class="author">@newvideo.Author</a></p></li>
                             <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="single.html"><img src="~/images/t2.jpg" alt="" /></a>
-                        <div class="time">
-                            <p>7:23</p>
-                        </div>
-                        <div class="clck">
-                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                        </div>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3><a href="single.html" class="title title-info">Interdum pellentesque vitae pulvinar tortor nullam metus a imperdiet</a></h3>
-                        <ul>
-                            <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-                            <li class="right-list"><p class="views views-info">4,200 views</p></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
-                    <div class="resent-grid-img recommended-grid-img">
-                        <a href="single.html"><img src="~/images/t3.jpg" alt="" /></a>
-                        <div class="time">
-                            <p>4:04</p>
-                        </div>
-                        <div class="clck">
-                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                        </div>
-                    </div>
-                    <div class="resent-grid-info recommended-grid-info">
-                        <h3><a href="single.html" class="title title-info">Nullam interdum metus a imperdiet pellentesque vitae pulvinar tortor</a></h3>
-                        <ul>
-                            <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-                            <li class="right-list"><p class="views views-info">71,174 views</p></li>
-                        </ul>
-                    </div>
-                </div>
+                }
+                
                 <div class="clearfix"> </div>
             </div>
             <div class="recommended">
                 <div class="recommended-grids">
                     <div class="recommended-info">
-                        <h3>Animated Cartoon</h3>
+                        <h3>动物卡通</h3>
                     </div>
                     <script src="~/js/responsiveslides.min.js"></script>
                     <script>

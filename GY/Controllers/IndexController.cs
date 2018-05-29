@@ -3,15 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BLL;
+using Model;
+using GY.Models;
 
 namespace GY.Controllers
 {
     public class IndexController : Controller
     {
+        GYEntities db = new GYEntities();
+        MoviesManager mv = new MoviesManager();
+        ImagesManager im=new ImagesManager();
         // GET: Index
         public ActionResult Index()
         {
-            return View();
+            IndexViewMode indexviewmode = new IndexViewMode();
+            indexviewmode.GetNewMovies = mv.GetNewVideo().Take(3);
+            indexviewmode.GetImages = im.GetImages();
+            return View(indexviewmode);
         }
     }
 }

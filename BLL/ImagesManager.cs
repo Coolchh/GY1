@@ -11,5 +11,12 @@ namespace BLL
 {
     public class ImagesManager
     {
+        IImages iimages = DataAccess.CreateImages();
+        public IEnumerable<Images>GetImages()
+        {
+            var getimages = iimages.GetImages();
+            return getimages;
+                 
+        }
     }
 }

@@ -278,7 +278,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Views\UserInfo\Login.cshtml" />
     <Content Include="Views\UserInfo\Register.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Index\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -289,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Movies\" />
     <Folder Include="Views\News\" />
   </ItemGroup>
   <ItemGroup>
