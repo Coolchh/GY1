@@ -65,70 +65,11 @@ namespace BLL
             var getnewvideo = imovies.GetNewVideo();
             return getnewvideo;
         }
-
-        //public IEnumerable<Video> GetRecommend()
-        //{
-        //    var recommend = imovies.GetRecommend();
-        //    return recommend;
-        //}
-        //public IEnumerable<Movies> GetMovies()
-        //{
-        //    var movies = imovies.GetMovies();
-        //    return movies;
-        //}
-
-        //public IEnumerable<Movies> Search(string search)
-        //{
-        //    var movies = imovies.Search(search);
-        //    return movies;
-        //}
-        //public IEnumerable<Movies> GetMoviesById(int? id)
-        //{
-        //    var movies = imovies.GetMoviesById(id);
-        //    return movies;
-        //}
-        //public IEnumerable<Movies> GetMoviesByMoviesId(int? id)
-        //{
-        //    var movies = imovies.GetMoviesByMoviesId(id);
-        //    return movies;
-        //}
-
-        //public IQueryable<Message> GetMessageByMoviesId(int? id)
-        //{
-        //    var Message = imovies.GetMessageByMoviesId(id);
-        //    return Message;
-        //}
-
-        //public void RemoveMovies(Movies shi)
-        //{
-        //    imovies.RemoveMovies(shi);
-
-        //}
-        //public void AddMovies(Movies shi)
-        //{
-        //    imovies.AddMovies(shi);
-
-        //}
-        //public void EditMovies(Movies shi)
-        //{
-        //    imovies.EditMovies(shi);
-
-        //}
-        //public void RemoveRangeMessage(IQueryable<Message> Message)
-        //{
-        //    imovies.RemoveRangeMessage(Message);
-        //}
-
-        //public IEnumerable<Movies> GetNewMovies()
-        //{
-        //    var getnewmovies = imovies.GetNewMovies();
-        //    return getnewmovies;
-        //}
-
-        //public IEnumerable<Video> GetRecommend()
-        //{
-        //    var recommend = imovies.GetRecommend();
-        //    return recommend;
-        //}
+        public IEnumerable<Movies> GetMoviesType(int id)
+        {
+            var moviestype1 = imovies.GetMoviesType(id);
+            return moviestype1;
+        }
+      
     }
 }

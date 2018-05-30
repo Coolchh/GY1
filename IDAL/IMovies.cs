@@ -20,16 +20,10 @@ namespace IDAL
         //IEnumerable<Movies> GetRecommend();
         IEnumerable<Movies> GetVideoByVideoKId(int? id);
         IEnumerable<Movies> Search(string search);
-        //IEnumerable<Movies> GetMovies();
-        //IEnumerable<Movies> GetMoviesById(int? id);
-        //IQueryable<Movies> GetMessageByMoviesId(int? id);
-        //void RemoveMovies(Movies movies);
-        //void AddMovies(Movies movies);
-        //void EditMovies(Movies movies);
-        //void RemoveRangeMessage(IQueryable<Message> Message);
-        //IEnumerable<Movies> GetNewMovies();
-        ////IEnumerable<Movies> GetRecommend();
-        //IEnumerable<Movies> GetMoviesByMoviesId(int? id);
-        //IEnumerable<Movies> Search(string search);
+
+
+
+        IEnumerable<Movies> GetMoviesType(int id);
+       
     }
 }

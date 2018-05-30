@@ -13,6 +13,10 @@ namespace GY.Models
         public IEnumerable<Movies> Movies1 { get; set; }
         public IEnumerable<Message> AllMessage { get; set; }
         public IEnumerable<Movies> MoviesTop5 { get; set; }
+        public IEnumerable<Movies> Get1MoviesType { get; set; }
+        public IEnumerable<Movies> Get2MoviesType { get; set; }
+        public IEnumerable<Movies> Get3MoviesType { get; set; }
+        public IEnumerable<Movies> Get4MoviesType { get; set; }
         public IEnumerable<MoviesType> GetMoviesTpye { get; set; }
     }
 }

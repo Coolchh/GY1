@@ -10,5 +10,7 @@ namespace IDAL
     public interface IMoviesType
     {
         IEnumerable<MoviesType> GetMoviesType();
+        
+
     }
 }

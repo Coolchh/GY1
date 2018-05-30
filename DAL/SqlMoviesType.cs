@@ -17,5 +17,6 @@ namespace DAL
              var moviestype = db.MoviesType.ToList();
              return moviestype;
          }
+      
     }
 }
