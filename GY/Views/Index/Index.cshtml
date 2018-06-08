@@ -241,7 +241,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li><a href="history.html" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>社区</a></li>
                 <li><a href="#" class="menu1"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>电影观赏<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
                 <ul class="cl-effect-2">
-                    <li><a href="movies.html">英语</a></li>
+                    <li><a href="">英语</a></li>
                     <li><a href="movies.html">汉语</a></li>
                     <li><a href="movies.html">印度语</a></li>
                     <li><a href="movies.html">泰语</a></li>
@@ -269,7 +269,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
 							});
                 </script>
-                <li><a href="movies.html" class="song-icon"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>电影音乐</a></li>
+                @*<li><a href="movies.html" class="song-icon"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>电影音乐</a></li>*@
                 <li><a href="news.html" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>新闻资讯</a></li>
             </ul>
             <!-- script-for-menu -->
@@ -903,11 +903,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="recommended">
                 <div class="recommended-grids">
                     <div class="recommended-info">
-                        <h3>Sports</h3>
+                        <h3>Actives</h3>
                     </div>
+                    @foreach(var active in Model.GetActive) {
                     <div class="col-md-3 resent-grid recommended-grid">
                         <div class="resent-grid-img recommended-grid-img">
-                            <a href="single.html"><img src="~/images/g.jpg" alt="" /></a>
+                            <a href="single.html"><img src="~/@active.Images" alt="" /></a>
                             <div class="time small-time">
                                 <p>7:30</p>
                             </div>
@@ -916,142 +917,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                         <div class="resent-grid-info recommended-grid-info video-info-grid">
-                            <h5><a href="single.html" class="title">Varius sit sed viverra nullam viverra nullam interdum metus</a></h5>
+                            <h5><a href="single.html" class="title">@active.ActiveTitle</a></h5>
                             <ul>
                                 <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
                                 <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-md-3 resent-grid recommended-grid">
-                        <div class="resent-grid-img recommended-grid-img">
-                            <a href="single.html"><img src="~/images/g1.jpg" alt="" /></a>
-                            <div class="time small-time">
-                                <p>9:34</p>
-                            </div>
-                            <div class="clck small-clck">
-                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="resent-grid-info recommended-grid-info video-info-grid">
-                            <h5><a href="single.html" class="title">Nullam interdum viverra nullam metus varius sit sed viverra</a></h5>
-                            <ul>
-                                <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-                                <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 resent-grid recommended-grid">
-                        <div class="resent-grid-img recommended-grid-img">
-                            <a href="single.html"><img src="~/images/g2.jpg" alt="" /></a>
-                            <div class="time small-time">
-                                <p>5:34</p>
-                            </div>
-                            <div class="clck small-clck">
-                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="resent-grid-info recommended-grid-info video-info-grid">
-                            <h5><a href="single.html" class="title">Varius sit sed viverra nullam viverra nullam interdum metus</a></h5>
-                            <ul>
-                                <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-                                <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 resent-grid recommended-grid">
-                        <div class="resent-grid-img recommended-grid-img">
-                            <a href="single.html"><img src="~/images/g3.jpg" alt="" /></a>
-                            <div class="time small-time">
-                                <p>6:55</p>
-                            </div>
-                            <div class="clck small-clck">
-                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="resent-grid-info recommended-grid-info video-info-grid">
-                            <h5><a href="single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
-                            <ul>
-                                <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-                                <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="recommended-grids">
-                    <div class="col-md-3 resent-grid recommended-grid">
-                        <div class="resent-grid-img recommended-grid-img">
-                            <a href="single.html"><img src="~/images/we2.jpg" alt=""></a>
-                            <div class="time small-time">
-                                <p>7:30</p>
-                            </div>
-                            <div class="clck small-clck">
-                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="resent-grid-info recommended-grid-info video-info-grid">
-                            <h5><a href="single.html" class="title">Varius sit sed viverra nullam viverra nullam interdum metus</a></h5>
-                            <ul>
-                                <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-                                <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 resent-grid recommended-grid">
-                        <div class="resent-grid-img recommended-grid-img">
-                            <a href="single.html"><img src="~/images/we1.jpg" alt=""></a>
-                            <div class="time small-time">
-                                <p>9:34</p>
-                            </div>
-                            <div class="clck small-clck">
-                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="resent-grid-info recommended-grid-info video-info-grid">
-                            <h5><a href="single.html" class="title">Nullam interdum viverra nullam metus varius sit sed viverra</a></h5>
-                            <ul>
-                                <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-                                <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 resent-grid recommended-grid">
-                        <div class="resent-grid-img recommended-grid-img">
-                            <a href="single.html"><img src="~/images/we4.jpg" alt=""></a>
-                            <div class="time small-time">
-                                <p>5:34</p>
-                            </div>
-                            <div class="clck small-clck">
-                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="resent-grid-info recommended-grid-info video-info-grid">
-                            <h5><a href="single.html" class="title">Varius sit sed viverra nullam viverra nullam interdum metus</a></h5>
-                            <ul>
-                                <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-                                <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 resent-grid recommended-grid">
-                        <div class="resent-grid-img recommended-grid-img">
-                            <a href="single.html"><img src="~/images/we3.jpg" alt=""></a>
-                            <div class="time small-time">
-                                <p>6:55</p>
-                            </div>
-                            <div class="clck small-clck">
-                                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="resent-grid-info recommended-grid-info video-info-grid">
-                            <h5><a href="single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
-                            <ul>
-                                <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
-                                <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
-                            </ul>
-                        </div>
-                    </div>
+                    </div> }                    
                     <div class="clearfix"> </div>
                 </div>
             </div>

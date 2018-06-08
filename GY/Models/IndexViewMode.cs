@@ -14,5 +14,7 @@ namespace GY.Models
         public IEnumerable<Active> Active5 { get; set; }
         public IEnumerable<Movies> GetNewMovies { get; set; }
         public IEnumerable<Images> GetImages { get; set; }
+
+        public IEnumerable<Active> GetActive { get; set; }
     }
 }

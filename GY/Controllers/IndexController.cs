@@ -14,12 +14,14 @@ namespace GY.Controllers
         GYEntities db = new GYEntities();
         MoviesManager mv = new MoviesManager();
         ImagesManager im=new ImagesManager();
+        ActiveManager am = new ActiveManager();
         // GET: Index
         public ActionResult Index()
         {
             IndexViewMode indexviewmode = new IndexViewMode();
             indexviewmode.GetNewMovies = mv.GetNewVideo().Take(3);
             indexviewmode.GetImages = im.GetImages();
+            indexviewmode.GetActive = am.GetActive().Take(8);
             return View(indexviewmode);
         }
     }

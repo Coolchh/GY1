@@ -19,5 +19,7 @@ namespace Model
         public string ActiveContent { get; set; }
         public Nullable<System.DateTime> ActiveTime { get; set; }
         public int FestiveID { get; set; }
+        public string Brief { get; set; }
+        public string Images { get; set; }
     }
 }

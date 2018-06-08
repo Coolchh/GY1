@@ -253,6 +253,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\LoginAttribute.cs" />
     <Compile Include="Attributes\MultiButtonAttribute.cs" />
+    <Compile Include="Controllers\ActiveController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -260,6 +261,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ActiveViewMode.cs" />
     <Compile Include="Models\IndexViewMode.cs" />
     <Compile Include="Models\MoviesViewMode.cs" />
     <Compile Include="Models\NewsViewMode.cs" />
@@ -289,6 +291,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Active\" />
     <Folder Include="Views\News\" />
   </ItemGroup>
   <ItemGroup>

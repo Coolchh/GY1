@@ -11,9 +11,11 @@
           </Key>
           <Property Name="ActiveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ActiveTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="ActiveContent" Type="nvarchar" MaxLength="50" />
+          <Property Name="ActiveContent" Type="nvarchar(max)" />
           <Property Name="ActiveTime" Type="datetime" />
           <Property Name="FestiveID" Type="int" Nullable="false" />
+          <Property Name="Brief" Type="nvarchar(max)" />
+          <Property Name="Images" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="AdminInfo">
           <Key>
@@ -168,9 +170,11 @@
           </Key>
           <Property Name="ActiveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ActiveTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ActiveContent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ActiveContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ActiveTime" Type="DateTime" Precision="3" />
           <Property Name="FestiveID" Type="Int32" Nullable="false" />
+          <Property Name="Brief" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Images" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="AdminInfo">
           <Key>
@@ -328,6 +332,8 @@
                 <ScalarProperty Name="ActiveContent" ColumnName="ActiveContent" />
                 <ScalarProperty Name="ActiveTime" ColumnName="ActiveTime" />
                 <ScalarProperty Name="FestiveID" ColumnName="FestiveID" />
+                <ScalarProperty Name="Brief" ColumnName="Brief" />
+                <ScalarProperty Name="Images" ColumnName="Images" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
