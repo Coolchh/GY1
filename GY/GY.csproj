@@ -254,6 +254,7 @@
     <Compile Include="Attributes\LoginAttribute.cs" />
     <Compile Include="Attributes\MultiButtonAttribute.cs" />
     <Compile Include="Controllers\ActiveController.cs" />
+    <Compile Include="Controllers\FestiveController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -282,6 +283,7 @@
     <Content Include="Views\UserInfo\Register.cshtml" />
     <Content Include="Views\Index\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Active\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -291,7 +293,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Active\" />
+    <Folder Include="Views\Festive\" />
     <Folder Include="Views\News\" />
   </ItemGroup>
   <ItemGroup>

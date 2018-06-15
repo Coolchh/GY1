@@ -224,7 +224,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="clearfix"> </div>
         </div>
-    </nav>
+    </nav>  
     <div class="copyrights">Collect from <a href="">.</a></div>
     <div class="col-sm-3 col-md-2 sidebar">
         <div class="top-navigation">
@@ -236,15 +236,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="drop-navigation drop-navigation">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="index.html" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
-                <li><a href="shows.html" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>TV Shows</a></li>
+                <li class=""><a href="@Url.Action("Index","Index")" class="home-icon"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
+                <li><a href="@Url.Action("Index","Festive")" class="user-icon"><span class="glyphicon glyphicon-home glyphicon-blackboard" aria-hidden="true"></span>TV Shows</a></li>
                 <li><a href="history.html" class="sub-icon"><span class="glyphicon glyphicon-home glyphicon-hourglass" aria-hidden="true"></span>社区</a></li>
                 <li><a href="#" class="menu1"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>电影观赏<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
                 <ul class="cl-effect-2">
-                    <li><a href="">英语</a></li>
-                    <li><a href="movies.html">汉语</a></li>
-                    <li><a href="movies.html">印度语</a></li>
-                    <li><a href="movies.html">泰语</a></li>
+                    <li><a href="@Url.Action("Index","Movies")">英语</a></li>
+                    <li><a href="@Url.Action("Index","Movies")">汉语</a></li>
+                    <li><a href="@Url.Action("Index","Movies")">印度语</a></li>
+                    <li><a href="@Url.Action("Index","Movies")">泰语</a></li>
                 </ul>
                 <!-- script-for-menu -->
                 <script>
@@ -256,9 +256,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </script>
                 <li><a href="#" class="menu"><span class="glyphicon glyphicon-film glyphicon-king" aria-hidden="true"></span>电影活动<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></li>
                 <ul class="cl-effect-1">
-                    <li><a href="sports.html">足球</a></li>
-                    <li><a href="sports.html">板球</a></li>
-                    <li><a href="sports.html">篮球</a></li>
+                    <li><a href="@Url.Action("Index","Active")">足球</a></li>
+                    <li><a href="@Url.Action("Index","Active")">板球</a></li>
+                    <li><a href="@Url.Action("Index","Active")">篮球</a></li>
                     
                 </ul>
                 <!-- script-for-menu -->
@@ -270,7 +270,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
                 </script>
                 @*<li><a href="movies.html" class="song-icon"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>电影音乐</a></li>*@
-                <li><a href="news.html" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>新闻资讯</a></li>
+                <li><a href="@Url.Action("Index","News")" class="news-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>新闻资讯</a></li>
             </ul>
             <!-- script-for-menu -->
             <script>
