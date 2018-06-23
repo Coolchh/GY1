@@ -10,6 +10,10 @@ namespace GY.Models
     {
         public IEnumerable<Active> GetNewActive { get; set; }
         public IEnumerable<Active> GetActive { get; set; }
-        public IEnumerable<Active> GetTypeActive { get; set; }
+        public IEnumerable<Active> GetTypeActive1 { get; set; }
+        public IEnumerable<Active> GetTypeActive2 { get; set; }
+        public IEnumerable<Active> GetTypeActive3 { get; set; }
+        
+
     }
 }

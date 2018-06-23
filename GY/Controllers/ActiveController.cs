@@ -10,13 +10,18 @@ using GY.Models;
 namespace GY.Controllers
 {
     public class ActiveController : Controller
-    {        
+    {
+        GYEntities db = new GYEntities();
+        ActiveManager am = new ActiveManager();
         // GET: Active
         public ActionResult Index()
         {
-            GYEntities db = new GYEntities();
-            ActiveManager am = new ActiveManager();
-            return View();
+            ActiveViewMode activeviewmode = new ActiveViewMode();
+            activeviewmode.GetTypeActive1 = am.GetTypeActive(1);
+            activeviewmode.GetTypeActive2 = am.GetTypeActive(2);
+            activeviewmode.GetTypeActive3 = am.GetTypeActive(3);
+
+            return View(activeviewmode);
 
         }
     }
